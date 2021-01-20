@@ -9,10 +9,14 @@ int main(void)
 
 	list = NULL;
 
-	LIST addelement(list, "un\n");
-	LIST addelement(list, "deux\n");
-	LIST addelement(list, "trois\n");
-	LIST addelement(list, "quatre\n");
+	list = addelement(list,"un\n");
+
+	list = addelement(list,"deux\n");
+
+	list = addelement(list,"trois\n");
+
+	list = addelement(list,"quatre\n");
+
 	printlist(list);
 	return 0;
 }
