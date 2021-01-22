@@ -1,15 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "list.h"
+#include <string.h>
 
-LIST *addelement(LIST *list, char *element)
+t_element *addelement(t_element *list, char *element)
 {
-	LIST *E;
-	E = malloc(sizeof(LIST));
-	if (E != NULL)
+	t_element *new;
+	
+	new = malloc(sizeof(t_element));
+	if (new != NULL || list != NULL)
 	{
-		E->element = element;
-		E->next = list;
+		new->Element = element;
+		new->next = list;
 	}		
-	return E;
+	return new;
 }
