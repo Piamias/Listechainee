@@ -1,12 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "list.h"
+#include <string.h>
 
-void printlist(LIST *list)
+void printlist(t_element *list)
 {
 	while (list != NULL)
 	{	
-		puts(list->element);	
+		puts(list->Element);	
 		list = list->next;
 	}
 }
