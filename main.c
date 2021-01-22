@@ -5,19 +5,29 @@
 
 int main(void)
 {
-	LIST *list;
+	t_element *elem;
 
-	list = NULL;
+	elem = NULL;
 
-	list = addelement(list,"un\n");
+	elem = addelement(elem,"Delete this\n");
 
-	list = addelement(list,"deux\n");
+	elem = addelement(elem,"un\n");
 
-	list = addelement(list,"trois\n");
+	elem = addelement(elem,"deux\n");
 
-	list = addelement(list,"quatre\n");
+	elem = addelement(elem,"trois\n");
 
-	printlist(list);
+	elem = addelement(elem,"quatre\n");
+
+	elem = addelement(elem,"cinq\n");
+
+	printlist(elem);
+
+	delelement(elem);
+
+	delelement(elem);
+
+	printlist(elem);
 	return 0;
 }
 
